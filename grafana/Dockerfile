@@ -1,4 +1,4 @@
-FROM grafana/grafana:4.6.3
+FROM grafana/grafana-arm32v7-linux:6.4.4
 # https://hub.docker.com/r/grafana/grafana/tags/
 
 COPY docker-entrypoint.sh /etc/grafana/docker-entrypoint.sh
