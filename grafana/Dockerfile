@@ -1,6 +1,9 @@
 FROM grafana/grafana-arm32v7-linux:6.4.4
 # https://hub.docker.com/r/grafana/grafana/tags/
 
+RUN apk update && \
+    apk install curl
+
 COPY docker-entrypoint.sh /etc/grafana/docker-entrypoint.sh
 COPY datasources /etc/grafana/datasources/
 COPY dashboards /etc/grafana/dashboards/
