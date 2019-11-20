@@ -1,19 +1,21 @@
 # faas-grafana
 
-OpenFaaS Grafana [Docker image](https://hub.docker.com/r/stefanprodan/faas-grafana/)
+OpenFaaS Grafana [Docker image](https://github.com/georgenicoll/faas-grafana).
+
+Repo forked from Stefan Prodan's [Git Repo](https://github.com/stefanprodan/faas-grafana).
 
 ### Kubernetes
 
-Run Grafan in OpenFaaS Kubernetes namespace:
+Run Grafana in OpenFaaS Kubernetes namespace:
 
 ```bash
 kubectl -n openfaas run \
---image=stefanprodan/faas-grafana:4.6.3 \
+--image=georgenicoll/faas-grafana:4.3.6 \
 --port=3000 \
 grafana
 ```
 
-Expose Grafan with a NodePort:
+Expose Grafana with a NodePort:
 
 ```bash
 kubectl -n openfaas expose deployment grafana \
