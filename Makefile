@@ -1,6 +1,7 @@
 NAME:=faas-grafana
-VERSION:=4.6.3
-DOCKER_REPOSITORY:=stefanprodan
+# VERSION is tracking the version of grafana that is being used in grafana/Dockerfile
+VERSION:=6.3.6
+DOCKER_REPOSITORY:=georgenicoll
 DOCKER_IMAGE_NAME:=$(DOCKER_REPOSITORY)/$(NAME)
 
 .PHONY: build
